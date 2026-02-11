@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const multer = require("multer");
+const { MONGO_URI } = process.env;
 
 const feedRoutes = require("./routes/feed");
 const authRoutes = require("./routes/auth");
@@ -60,9 +61,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(
-    "mongodb+srv://YoussefEmad:rbEaB3RUI4AP9d6m@course-nodejs-crud.4ejrdry.mongodb.net/shop?retryWrites=true",
-  )
+  .connect(MONGO_URI)
   .then((result) => {
     app.listen(8080);
   })

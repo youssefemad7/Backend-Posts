@@ -1,0 +1,5 @@
+{
+  "env": {
+    "MONGO_URI": "mongodb+srv://YoussefEmad:rbEaB3RUI4AP9d6m@course-nodejs-crud.4ejrdry.mongodb.net/shop?retryWrites=true"
+  }
+}
